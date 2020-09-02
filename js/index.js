@@ -52,9 +52,9 @@ window.addEventListener("load", (event) => {
   intro.style.fontSize = "3rem";
 });
 
- mainContent.addEventListener("click", (event) => {
-    mainContent.style.backgroundColor = "purple";
-  });
+mainContent.addEventListener("click", (event) => {
+  mainContent.style.backgroundColor = "purple";
+});
 
 textParagraph.addEventListener("click", (event) => {
   event.target.style.backgroundColor = "orange";
@@ -77,15 +77,23 @@ textParagraph.addEventListener("click", (event) => {
 // }
 // const newH2 = document.querySelector(".text-content h2");
 // newH2.addEventListener("select", textSelect);
-navBar[0].addEventListener("click", (event)=>{
-    event.preventDefault()
-})
-navBar[1].addEventListener("click", (event)=>{
-    event.preventDefault()
-})
-navBar[2].addEventListener("click", (event)=>{
-    event.preventDefault()
-})
-navBar[3].addEventListener("click", (event)=>{
-    event.preventDefault()
-})
+
+Array.from(navBar).forEach((a) => {
+  a.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.target.style.fontSize = "3rem";
+  });
+});
+
+// navBar[0].addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
+// navBar[1].addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
+// navBar[2].addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
+// navBar[3].addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
