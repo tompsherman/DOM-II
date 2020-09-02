@@ -6,7 +6,8 @@ const header = document.querySelector(".main-navigation");
 const navBar = document.querySelectorAll(".nav-link");
 const intro = document.querySelector(".intro p");
 const bus = document.querySelector(".intro img");
-const textContent = document.querySelector(".text-content");
+const mainContent = document.querySelector(".text-content");
+const textParagraph = document.querySelector(".text-content p");
 
 header.addEventListener("dblclick", (event) => {
   event.target.style.fontSize = "2rem";
@@ -49,6 +50,24 @@ bus.addEventListener("mouseup", (event) => {
 });
 window.addEventListener("load", (event) => {
   intro.style.fontSize = "3rem";
+});
+
+ mainContent.addEventListener("click", (event) => {
+    mainContent.style.backgroundColor = "purple";
+  });
+
+textParagraph.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = "orange";
+});
+
+debugger
+
+// textParagraph.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//   });
+
+textParagraph.addEventListener("click", (event) => {
+  event.stopPropagation();
 });
 
 // function textSelect(event) {
