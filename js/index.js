@@ -1,7 +1,7 @@
 // Your code goes here
 
 const button = document.querySelectorAll(".btn");
-const headline = document.querySelectorAll(".text-content ");
+const headline = document.querySelector("h2");
 const header = document.querySelector(".main-navigation");
 const navBar = document.querySelectorAll(".nav-link");
 const intro = document.querySelector(".intro p");
@@ -9,7 +9,7 @@ const bus = document.querySelector(".intro img");
 const mainContent = document.querySelector(".text-content");
 const textParagraph = document.querySelector(".text-content p");
 
-header.addEventListener("dblclick", (event) => {
+headline.addEventListener("dblclick", (event) => {
   event.target.style.fontSize = "2rem";
 });
 header.addEventListener("mouseover", (event) => {
@@ -20,7 +20,7 @@ header.addEventListener("mouseout", (event) => {
   event.target.style.backgroundColor = "gray";
 });
 
-header.addEventListener(
+headline.addEventListener(
   "click",
   (event) => (event.target.style.fontSize = "30rem")
 );
@@ -60,8 +60,6 @@ textParagraph.addEventListener("click", (event) => {
   event.target.style.backgroundColor = "orange";
 });
 
-debugger
-
 // textParagraph.addEventListener("click", (event) => {
 //     event.stopPropagation();
 //   });
@@ -79,3 +77,15 @@ textParagraph.addEventListener("click", (event) => {
 // }
 // const newH2 = document.querySelector(".text-content h2");
 // newH2.addEventListener("select", textSelect);
+navBar[0].addEventListener("click", (event)=>{
+    event.preventDefault()
+})
+navBar[1].addEventListener("click", (event)=>{
+    event.preventDefault()
+})
+navBar[2].addEventListener("click", (event)=>{
+    event.preventDefault()
+})
+navBar[3].addEventListener("click", (event)=>{
+    event.preventDefault()
+})
